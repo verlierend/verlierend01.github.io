@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DCG大会トーナメント</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">COMMUNITY TOURNAMENT</p>
+    <h1 id="event-title">DCG大会</h1>
+    <p id="event-meta" class="muted">大会情報を読み込んでいます…</p>
+  </div>
+</header>
+<main class="wrap">
+  <section class="toolbar card">
+    <div>
+      <label for="endpoint">公開データURL</label>
+      <input id="endpoint" type="url" placeholder="Apps ScriptのウェブアプリURL">
+    </div>
+    <button id="load-btn">大会情報を読み込む</button>
+  </section>
+  <p id="notice" class="notice" role="status">公開データURLを設定してください。</p>
+  <section class="card">
+    <div class="section-head">
+      <h2>大会情報</h2>
+      <span id="status" class="pill">未読込</span>
+    </div>
+    <p id="event-description" class="muted">大会の説明がここに表示されます。</p>
+    <div class="stats">
+      <div><strong id="player-count">—</strong><span>参加者</span></div>
+      <div><strong id="match-count">—</strong><span>対戦</span></div>
+      <div><strong id="champion">—</strong><span>優勝者</span></div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="section-head">
+      <h2>トーナメント表・対戦結果</h2>
+      <span class="muted small">結果は運営が管理シートで更新します</span>
+    </div>
+    <div id="bracket" class="bracket"><p class="muted">データがありません。</p></div>
+  </section>
+  <section class="card">
+    <div class="section-head"><h2>参加者・デッキレシピ</h2></div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>参加者名</th><th>ゲーム内名</th><th>デッキレシピ</th></tr></thead>
+        <tbody id="players"><tr><td colspan="3" class="muted">データがありません。</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+  <footer><p>このページは大会情報の公開用です。参加申請は運営が案内するGoogle Formsから行ってください。</p></footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
